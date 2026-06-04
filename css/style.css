@@ -10,6 +10,9 @@
   --yellow: #f8d26a;
   --line: rgba(24, 52, 63, 0.14);
   --shadow: 0 18px 60px rgba(20, 54, 65, 0.14);
+  --page-gradient: linear-gradient(180deg, #f5fbfa 0%, #e6f4f1 42%, #d6ece8 100%);
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.94);
 }
 
 * {
@@ -24,7 +27,8 @@ body {
   margin: 0;
   font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--page-gradient);
+  background-attachment: fixed;
   letter-spacing: 0;
 }
 
@@ -50,7 +54,7 @@ a {
   gap: 24px;
   min-height: 74px;
   padding: 14px clamp(18px, 4vw, 56px);
-  background: rgba(251, 250, 246, 0.88);
+  background: rgba(245, 251, 250, 0.88);
   border-bottom: 1px solid rgba(24, 52, 63, 0.08);
   backdrop-filter: blur(18px);
 }
@@ -227,7 +231,7 @@ p {
 }
 
 .teacher-problem {
-  background: var(--white);
+  background: transparent;
 }
 
 .problem-grid {
@@ -252,7 +256,8 @@ p {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f8fbf8;
+  background: var(--surface);
+  backdrop-filter: blur(14px);
 }
 
 .problem-list span {
@@ -279,7 +284,7 @@ p {
 }
 
 .promise {
-  background: #eaf4f1;
+  background: transparent;
 }
 
 .promise-grid {
@@ -297,7 +302,7 @@ p {
 }
 
 .program {
-  background: var(--paper);
+  background: transparent;
 }
 
 .program-grid {
@@ -307,9 +312,10 @@ p {
 .program-card {
   overflow: hidden;
   border-radius: 8px;
-  background: var(--white);
+  background: var(--surface-strong);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
 }
 
 .program-card img {
@@ -323,7 +329,7 @@ p {
 }
 
 .lesson {
-  background: #fff8ec;
+  background: transparent;
 }
 
 .lesson-intro {
@@ -352,8 +358,9 @@ p {
   overflow: hidden;
   border: 1px solid rgba(24, 52, 63, 0.12);
   border-radius: 8px;
-  background: var(--white);
+  background: var(--surface-strong);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
 }
 
 .lesson-feature > img {
@@ -395,7 +402,7 @@ p {
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fbfaf6;
+  background: rgba(245, 251, 250, 0.72);
 }
 
 .lesson-meta dt {
@@ -425,7 +432,8 @@ p {
   min-height: 100%;
   border: 1px solid rgba(24, 52, 63, 0.12);
   border-radius: 8px;
-  background: var(--white);
+  background: var(--surface-strong);
+  backdrop-filter: blur(14px);
 }
 
 .lesson-gallery img {
@@ -461,8 +469,8 @@ p {
 }
 
 .format {
-  color: var(--white);
-  background: #173944;
+  color: var(--ink);
+  background: transparent;
 }
 
 .format-layout {
@@ -473,7 +481,7 @@ p {
 }
 
 .format-layout p {
-  color: rgba(255, 255, 255, 0.74);
+  color: var(--muted);
 }
 
 .format-steps {
@@ -487,23 +495,24 @@ p {
   gap: 20px;
   align-items: center;
   padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
 }
 
 .format-steps strong {
-  color: var(--yellow);
+  color: var(--teal-dark);
   font-size: 19px;
 }
 
 .format-steps span {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--muted);
   line-height: 1.65;
 }
 
 .teacher-proof {
-  background: #fff;
+  background: transparent;
 }
 
 .proof-grid {
@@ -538,9 +547,7 @@ p {
 
 .final-cta {
   padding: clamp(78px, 9vw, 130px) 22px;
-  background:
-    linear-gradient(135deg, rgba(239, 128, 111, 0.18), rgba(118, 183, 178, 0.24)),
-    var(--paper);
+  background: transparent;
 }
 
 .final-inner {
@@ -563,7 +570,7 @@ p {
   gap: 20px;
   padding: 32px clamp(20px, 5vw, 70px);
   color: rgba(255, 255, 255, 0.74);
-  background: #102b34;
+  background: linear-gradient(180deg, #173944 0%, #102b34 100%);
 }
 
 .site-footer p {
